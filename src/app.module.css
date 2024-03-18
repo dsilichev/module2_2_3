@@ -1,0 +1,64 @@
+.container {
+  text-align: center;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.button:hover {
+  background-color: hsl(var(--accent-color-hue), var(--accent-color-saturation), 87%);
+}
+
+.button:disabled {
+  background-color: var(--disabled-color);
+}
+
+.calculator-content {
+  margin-bottom: 30px;
+  min-height: 50px;
+  border: 2px solid hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
+  border-radius: 15px;
+  padding: 15px 20px;
+}
+
+.keys-container {
+  display: flex;
+}
+
+.number-keys-list {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.number-key-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 0px;
+  font-size: 0.75rem;
+}
+
+.keys-item-button {
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.75rem 1rem;
+  background: #cccccc;
+  border: none;
+  margin-bottom: 0.25rem;
+}
+
+.number-key-item.active .keys-item-button,
+.number-key-item.done .keys-item-button {
+  background: hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
+}
+
+.number-key-item.active,
+.number-key-item.active .keys-item-button {
+  font-weight: bold;
+}
